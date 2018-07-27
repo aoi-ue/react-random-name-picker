@@ -9,7 +9,7 @@ class App extends Component {
       names: ["gordon", "sahil", "david", "sally", "jane", "alice"],
       luckyWinnerIndex: null,
       value: "",
-      blah: "hello"
+      newName: "hello"
     };
   }
 
@@ -23,7 +23,7 @@ class App extends Component {
 
 
     this.setState({
-      names: [...this.state.names, this.state.value]
+      names: [...this.state.names, this.state.newName]
     });
   };
 
@@ -46,8 +46,8 @@ class App extends Component {
           <label>
             <input
               type="text"
-              value={this.state.blah}
-              onChange={(event) => this.setState({blah: event.target.value})}
+              value={this.state.newName}
+              onChange={(event) => this.setState({newName: event.target.value})}
             />
           </label>
           <input type="submit" value="Submit" />
